@@ -5,7 +5,6 @@ import org.hibernate.query.Query;
 import org.junit.jupiter.api.*;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
-import org.max.seminar.CurrentEntity;
 
 import javax.persistence.PersistenceException;
 import java.sql.ResultSet;
@@ -110,7 +109,6 @@ public class CustomerTest extends AbstractTest{
         session.persist(entity);
         //then
         Assertions.assertThrows(PersistenceException.class, () -> session.getTransaction().commit());
-        ;
     }
 
 }
